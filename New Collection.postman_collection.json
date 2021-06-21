@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "a70400f8-9e28-45fb-9385-2b38b590eda5",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Landing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2100/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"tejmhatre.oct30@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2100/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Tej\",\r\n    \"middleName\":\"J\",\r\n    \"lastName\":\"Mhatre\",\r\n    \"emailId\":\"tejmhatre.oct30@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2100/registerUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMTA0NzkxNzM1YmMzMGY0MjkxZDUwIiwiaWF0IjoxNjI0MzExMDA4LCJuYmYiOjE2MjQzMTEwMTAsImV4cCI6MTYyNDM5NzQwOCwiYXVkIjoiNjBkMTA0NzkxNzM1YmMzMGY0MjkxZDUwIiwiaXNzIjoiNjBkMTA0NzkxNzM1YmMzMGY0MjkxZDUwIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.v8AgxozRWIjj9LmqWOwP4TUrK9YboKNYVBj0q6sfes0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaWF0IjoxNjI0MzA5NDM1LCJuYmYiOjE2MjQzMDk0MzcsImV4cCI6MTYyNDM5NTgzNSwiYXVkIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaXNzIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.x7-_nrR2k-xRryOXEbAB9bfO-0kqDhQsWTHuBFXVa80",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"60d104791735bc30f4291d50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2100/userDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"userDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaWF0IjoxNjI0MzA5NDM1LCJuYmYiOjE2MjQzMDk0MzcsImV4cCI6MTYyNDM5NTgzNSwiYXVkIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaXNzIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.x7-_nrR2k-xRryOXEbAB9bfO-0kqDhQsWTHuBFXVa80",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2100/logOut",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"logOut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaWF0IjoxNjI0MzEwMjA1LCJuYmYiOjE2MjQzMTAyMDcsImV4cCI6MTYyNDM5NjYwNSwiYXVkIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaXNzIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.hglHjaOM7dPev-AvkF6UtaQpJ9RXWXcOAD17ayNemaM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Tej\",\r\n    \"middleName\":\"Jitendra\",\r\n    \"lastName\":\"Mhatre\",\r\n    \"emailId\":\"tejmhatre.oct30@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"id\":\"60d0f97f3454e852981128d3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2100/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaWF0IjoxNjI0MzEwMjA1LCJuYmYiOjE2MjQzMTAyMDcsImV4cCI6MTYyNDM5NjYwNSwiYXVkIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaXNzIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.hglHjaOM7dPev-AvkF6UtaQpJ9RXWXcOAD17ayNemaM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaWF0IjoxNjI0MzA5NDM1LCJuYmYiOjE2MjQzMDk0MzcsImV4cCI6MTYyNDM5NTgzNSwiYXVkIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwiaXNzIjoiNjBkMGY5N2YzNDU0ZTg1Mjk4MTEyOGQzIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.x7-_nrR2k-xRryOXEbAB9bfO-0kqDhQsWTHuBFXVa80",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"60d0f97f3454e852981128d3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2100/deleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2100",
+					"path": [
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
