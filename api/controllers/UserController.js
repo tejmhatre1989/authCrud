@@ -84,7 +84,7 @@ export const login = async function (req, res) {
 }
 
 export const userDetails = async function (req, res) {
-   User.findById(req.body.id).
+  await User.findById(req.body.id).
         exec(function (error, f) {
             return res.status(200).json({ data: f, status: true });
         });

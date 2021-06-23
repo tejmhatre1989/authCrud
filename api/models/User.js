@@ -26,7 +26,7 @@ let userSchema = new Schema({
     },
     isActive: {
         type: String,
-        enum: ['0', '1', '2'],
+        enum: ['0', '1'],
         default: '1'
     },
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
