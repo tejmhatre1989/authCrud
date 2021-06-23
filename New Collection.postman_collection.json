@@ -6,6 +6,152 @@
 	},
 	"item": [
 		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "Get todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Create todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaWF0IjoxNjI0NDc0MDgyLCJuYmYiOjE2MjQ0NzQwODQsImV4cCI6MTYyNDU2MDQ4MiwiYXVkIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaXNzIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.53_fk3UifW6SU6U4W1_rqDJGSX_0O8-HYuCspwss89s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "user",
+								"value": "eyJmaXJzdE5hbWUiOiJUZWoiLCJtaWRkbGVOYW1lIjoiSiIsImxhc3ROYW1lIjoiTWhhdHJlIiwiZW1haWxJZCI6InRlam1oYXRyZS5vY3QzMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRFdjZtbVNKcXpucktNOVh5Um9IeWx1N1BUUk9ZSXpyb24yWmFMaEhsdTJhcXVZa2g0SjJieSIsImlzQWN0aXZlIjoiMSIsIl9pZCI6IjYwZDM4MWRmOWQxMTQ0MmY3OGRjOWUwYiIsIl9fdiI6MH0%3D",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"second blog\",\r\n    \"description\":\"second blog description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2100/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2100",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaWF0IjoxNjI0NDc0MDgyLCJuYmYiOjE2MjQ0NzQwODQsImV4cCI6MTYyNDU2MDQ4MiwiYXVkIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaXNzIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.53_fk3UifW6SU6U4W1_rqDJGSX_0O8-HYuCspwss89s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user",
+								"value": "eyJmaXJzdE5hbWUiOiJUZWoiLCJtaWRkbGVOYW1lIjoiSiIsImxhc3ROYW1lIjoiTWhhdHJlIiwiZW1haWxJZCI6InRlam1oYXRyZS5vY3QzMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRFdjZtbVNKcXpucktNOVh5Um9IeWx1N1BUUk9ZSXpyb24yWmFMaEhsdTJhcXVZa2g0SjJieSIsImlzQWN0aXZlIjoiMSIsIl9pZCI6IjYwZDM4MWRmOWQxMTQ0MmY3OGRjOWUwYiIsIl9fdiI6MH0%3D",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"60d3854f905f2033c05ddad5\",\r\n    \"title\":\"one blog\",\r\n    \"description\":\"one blog description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2100/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2100",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEifQ.eyJkYXRhIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaWF0IjoxNjI0NDc0MDgyLCJuYmYiOjE2MjQ0NzQwODQsImV4cCI6MTYyNDU2MDQ4MiwiYXVkIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwiaXNzIjoiNjBkMzgxZGY5ZDExNDQyZjc4ZGM5ZTBiIiwic3ViIjoidXNlciIsImp0aSI6IjEifQ.53_fk3UifW6SU6U4W1_rqDJGSX_0O8-HYuCspwss89s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user",
+								"value": "eyJmaXJzdE5hbWUiOiJUZWoiLCJtaWRkbGVOYW1lIjoiSiIsImxhc3ROYW1lIjoiTWhhdHJlIiwiZW1haWxJZCI6InRlam1oYXRyZS5vY3QzMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRFdjZtbVNKcXpucktNOVh5Um9IeWx1N1BUUk9ZSXpyb24yWmFMaEhsdTJhcXVZa2g0SjJieSIsImlzQWN0aXZlIjoiMSIsIl9pZCI6IjYwZDM4MWRmOWQxMTQ0MmY3OGRjOWUwYiIsIl9fdiI6MH0%3D",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"60d388ba2a75d710cc531ad5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2100/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2100",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Landing",
 			"request": {
 				"method": "GET",
